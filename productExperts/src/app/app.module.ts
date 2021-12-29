@@ -16,6 +16,7 @@ import { SignUpComponent } from './component/sign-up/sign-up.component';
 import { SignInComponent } from './component/sign-in/sign-in.component';
 
 import {DirectoryService} from './services/directory.service';
+import { SearchfilterPipe } from './searchfilter.pipe';
 
 const routes: Routes = [
   { path: 'what', component: WhatItIsComponent },
@@ -32,7 +33,7 @@ const routes: Routes = [
     HeaderNavbarComponent,
     FooterComponent,
     WhatItIsComponent,
-    HowItWorksComponent,DirectoryComponent,SignUpComponent,SignInComponent
+    HowItWorksComponent,DirectoryComponent,SignUpComponent,SignInComponent, SearchfilterPipe
   ],
   imports: [
     BrowserModule,

@@ -1,17 +1,7 @@
-<!-- <p>directory works!</p>
-<div *ngFor="let item of directories">
-<div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">{{item.first_name}}</h5>
-      <p class="card-text">{{item.email}}</p>
-   
-    </div>
-  </div>
-
-</div> -->
-
+<input type="text" class="form-control" placeholder="Search for..." [(ngModel)]="searchText" >
 <div class="card-group">
-    <div class="card"  *ngFor="let item of directories">
+    <!-- <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" > -->
+    <div class="card" *ngFor="let item of directories | searchfilter: searchText; index as i" >
      
       <div class="card-body">
         <h5 class="card-title">{{item.first_name}}</h5>
