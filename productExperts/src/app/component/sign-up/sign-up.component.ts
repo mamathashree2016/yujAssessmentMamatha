@@ -9,6 +9,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 export class SignUpComponent implements OnInit {
   profileForm: any;
   constructor() { }
+  
   ngOnInit(): void {
     this.profileForm = new FormGroup({
       firstName: new FormControl('',Validators.required),

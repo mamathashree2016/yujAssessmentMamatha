@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule }   from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -12,6 +14,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { DirectoryComponent } from './component/directory/directory.component';
 import { SignUpComponent } from './component/sign-up/sign-up.component';
 import { SignInComponent } from './component/sign-in/sign-in.component';
+
+import {DirectoryService} from './services/directory.service';
 
 const routes: Routes = [
   { path: 'what', component: WhatItIsComponent },
@@ -32,9 +36,9 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,RouterModule.forRoot(routes),FormsModule,ReactiveFormsModule
+    AppRoutingModule,RouterModule.forRoot(routes),FormsModule,ReactiveFormsModule,HttpClientModule
   ],
-  providers: [],
+  providers: [DirectoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
