@@ -4,10 +4,11 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class DirectoryService {
-  configUrl = 'https://reqres.in/api/products/3';
+  configUrl = 'https://reqres.in/api/products';
+  baseUrl= 'assets/data.json';
   constructor(  private http: HttpClient) { }
 
   getdirectory() {
-    return this.http.get(this.configUrl);
+    return this.http.get(this.baseUrl);
   }
 }
